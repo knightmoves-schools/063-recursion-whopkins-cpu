@@ -4,7 +4,7 @@ function markAsDone(todos) {
 
 function transform(index, todos, modifiedTodos){
     if(index < todos.length){
-        modifiedTodos.push({...todos[index], description: 'done - ' + todos[index].description});
+        modifiedTodos.push('done - ' + todos[index]);
         return transform(index + 1, todos, modifiedTodos)
     }else{
         return modifiedTodos
